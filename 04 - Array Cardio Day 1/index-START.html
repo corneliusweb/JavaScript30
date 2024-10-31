@@ -143,6 +143,13 @@
 				'car',
 				'truck',
 			];
+			const transportByNum = data.reduce((key, value) => {
+				if (!key[value]) {
+					key[value] = 0;
+				}
+				key[value]++;
+				return key;
+			}, {});
 		</script>
 	</body>
 </html>
